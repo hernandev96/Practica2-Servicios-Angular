@@ -1,0 +1,36 @@
+<div class="contenedor animate__animated animate__fadeInLeft" *ngIf="pokemon.nombre.length!==0; else showNothing">
+    <div class="col-3">
+      <h1 class="nombre-pokemon">
+        <img src="../../../../assets/images/egg_pokemon.png" alt="egg pokemon" class="nombre-img">
+        {{pokemon.nombre.toUpperCase()}}
+      </h1>
+      <div class="pokemon-info">
+        <figure>
+          <img src="{{pokemon.imagen}}" alt="image pokemon" class="pokemon-img">
+        </figure>
+        <div class="pokemon-detalles">
+          <div class="habilidades">
+            <h3> <img src="../../../../assets/images/habilidad.png" alt="habilidad image"> Habilidades</h3>
+            <ul>
+              <li *ngFor="let habilidad of pokemon.habilidades">
+                {{habilidad.hability}}
+              </li>
+            </ul>
+          </div>
+          <div class="experiencia">
+            <h3><img src="../../../../assets/images/experiencia.png" alt="experience image">Experiencia Base:{{pokemon.experiencia_base}}</h3>
+            <hr>
+            <h3><img src="../../../../assets/images/peso.png" alt="peso image">Peso:{{pokemon.peso}}</h3>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<ng-template #showNothing>
+    <div class=" mt-5 contenedor">
+        <h2>
+            Aun no se consulta un pokemon
+        </h2>
+    </div>
+</ng-template>

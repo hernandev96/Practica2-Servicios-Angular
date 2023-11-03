@@ -1,0 +1,63 @@
+.contenedor{
+    display: grid;
+    place-items: left;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+h2,h4{
+    color:black;
+    text-shadow: 3px 3px white;
+
+}
+.nombre-pokemon{
+  color:black;
+  margin-left: 75px;
+  margin-top:10px;
+  letter-spacing: 5px;
+
+}
+.nombre-img{
+  width: 64px;
+  height: 64px;
+}
+.pokemon-info{
+  display: flex;
+  justify-content: flex-start;
+}
+.pokemon-img{
+  width: 250px;
+  height: 250px;
+  border: solid 5px black;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  background: #f857a6;
+  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+  background: linear-gradient(to right, #ff5858, #f857a6);
+}
+.pokemon-detalles{
+  border: solid 5px black;
+  width: 900px;
+  height: auto;
+  display: flex;
+  margin-top: 25px;
+  margin-left: 150px;
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  background-color: white;
+  border-radius: 25px;
+}
+.habilidades{
+  width: 400px;
+  margin-left: 130px;
+}
+.experiencia{
+  width: 400px;
+}
+ul{
+  margin-left: 25px;
+}
+li{
+  list-style-image:url("../../../../assets/images/pokebola.png");
+}
