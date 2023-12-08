@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import { Observable } from 'rxjs';
-import { buscar } from '../pokemon/interfaces/buscar.interface';
+import { Busqueda } from '../pokemon/interfaces/Busqueda.interface';
 
 
 @Injectable({
@@ -15,7 +15,7 @@ export class ApiService {
 
 
 
-  public getPokemon(pokemon:buscar):Observable<any>{
+  public getPokemon(pokemon:Busqueda):Observable<any>{
 
     console.log(this.urlPoke + pokemon.nombre);
     return this.http.get<any>(this.urlPoke+pokemon.nombre);

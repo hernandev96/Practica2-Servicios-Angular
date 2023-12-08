@@ -1,8 +1,8 @@
-import { habilidad } from "./habilidad.interface";
+import { Habilidad } from "./Habilidad.interface";
 
 export interface Pokemon{
     nombre:string;
-    habilidades:[habilidad],
+    habilidades:[Habilidad],
     experiencia_base:number,
     imagen:string,
     peso:number

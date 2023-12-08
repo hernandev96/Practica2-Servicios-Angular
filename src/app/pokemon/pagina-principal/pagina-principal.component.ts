@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
-import { Pokemon } from '../interfaces/pokemon.interface';
-import { habilidad } from '../interfaces/habilidad.interface';
+import { Pokemon } from '../interfaces/Pokemon.interface';
+import { Habilidad } from '../interfaces/Habilidad.interface';
 
 import { ApiService } from 'src/app/service/api.service';
-import { buscar } from '../interfaces/buscar.interface';
+import { Busqueda } from '../interfaces/Busqueda.interface';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -12,7 +12,7 @@ import { buscar } from '../interfaces/buscar.interface';
   styleUrls: ['./pagina-principal.component.css']
 })
 export class PaginaPrincipalComponent {
-  public habilidades:habilidad={
+  public habilidades:Habilidad={
     hability:"",
     url:""
   };
@@ -32,7 +32,7 @@ export class PaginaPrincipalComponent {
 
 
 
-  obtenerDatos(pokemon:buscar):void{
+  obtenerDatos(pokemon:Busqueda):void{
     console.log("Estoy en main-page componente me llego el pokemon:"+pokemon.nombre);
     this.apiservice.getPokemon(pokemon).subscribe(data=>{
       this.data=data;

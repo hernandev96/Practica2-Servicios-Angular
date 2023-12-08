@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { buscar } from '../../interfaces/buscar.interface';
+import { Busqueda } from '../../interfaces/Busqueda.interface'
 
 @Component({
   selector: 'app-busqueda',
@@ -8,12 +8,12 @@ import { buscar } from '../../interfaces/buscar.interface';
 })
 export class BusquedaComponent {
 
-  public pokemon:buscar={
+  public pokemon:Busqueda={
     nombre:"",
   };
 
   @Output()
-  BuscarPokemon:EventEmitter<buscar> = new EventEmitter();
+  BuscarPokemon:EventEmitter<Busqueda> = new EventEmitter();
 
   consultarPokemon():void{
     if(this.pokemon.nombre.length===0)return;
