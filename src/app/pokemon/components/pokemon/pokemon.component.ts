@@ -10,7 +10,7 @@ export class PokemonComponent {
   @Input()
   public pokemon:Pokemon={
     nombre:"",
-    habilidades:[{hability:"",url:""}],
+    habilidades:[{habilidad:"",url:""}],
     experiencia_base:0,
     imagen:"",
     peso:0

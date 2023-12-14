@@ -1,4 +1,4 @@
 export interface Habilidad{
-    hability:string,
+    habilidad:string,
     url:string
 }

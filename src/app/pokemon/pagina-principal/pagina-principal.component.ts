@@ -13,7 +13,7 @@ import { Busqueda } from '../interfaces/Busqueda.interface';
 })
 export class PaginaPrincipalComponent {
   public habilidades:Habilidad={
-    hability:"",
+    habilidad:"",
     url:""
   };
 
@@ -28,7 +28,7 @@ export class PaginaPrincipalComponent {
   constructor(private apiservice:ApiService){}
 
   @Output()
-  onGetData: EventEmitter<Pokemon>=new EventEmitter();
+  traerDatos: EventEmitter<Pokemon>=new EventEmitter();
 
 
 
@@ -52,12 +52,15 @@ export class PaginaPrincipalComponent {
       this.pokemon.experiencia_base=dataObject.base_experience;
       for(let i=0;i< dataObject.abilities.length;i++){
         this.pokemon.habilidades.push({
-          hability:dataObject.abilities[i].ability.name,
+          habilidad:dataObject.abilities[i].ability.name,
           url:dataObject.abilities[i].ability.url
         });
 
       }
+      // Se elimina la primera habilidad ya que al costruir la variable pokemon
+      // se añade una habilidad vacia
       this.pokemon.habilidades.shift();
+      // Se guarda el url de la imagen del pokemon
       this.pokemon.imagen=dataObject.sprites.front_default;
 
 
